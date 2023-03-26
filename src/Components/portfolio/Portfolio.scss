@@ -1,0 +1,74 @@
+.portfolio {
+    padding-top: 80px;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #6e1423;
+    text-align: center;
+    font-family: 'Josefin sans', Georgia, 'Times New Roman', Times, serif;
+
+    .certificates {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 1rem;
+        border-top: 2px #ff9f9f solid;
+
+
+        .leftWing {
+            flex: 1 1 10rem;
+            min-height: fit-content;
+            margin-top: 2rem;
+            padding-left: 1rem;
+
+            img {
+                width: 90%;
+                height: 90%;
+                padding-top: 2rem;
+                transform: scale(1.52);
+                object-fit: cover;
+
+                &:hover {
+                    transform: scale(1.72);
+                    transition: all 1s ease;
+                }
+            }
+        }
+
+        .rightWing {
+            flex: 1 1 30rem;
+            overflow: hidden;
+            margin-top: 2rem;
+
+            &::-webkit-scrollbar {
+                display: ruby;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .certificates {
+        min-height: fit-content;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .leftWing {
+            width: 20rem;
+            height: 20rem;
+
+            img {
+                width: 90%;
+                padding-top: 2rem;
+                transform: scale(1);
+                object-fit: contain;
+            }
+        }
+
+        .rightWing {
+            width: 90vw;
+            margin: 0 0rem;
+            overflow: hidden !important;
+        }
+    }
+}

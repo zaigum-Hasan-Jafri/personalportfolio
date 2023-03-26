@@ -1,0 +1,97 @@
+.details {
+    height: fit-content;
+    min-height: 100vh;
+    padding-top: 80px;
+    text-align: center;
+    background-color: #6e1423;
+    font-family: 'Josefin sans', Georgia, 'Times New Roman', Times, serif;
+
+    .wrapper {
+        display: grid;
+        column-gap: 5em;
+        row-gap: 10px;
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        border-top: 2px #ff9f9f solid;
+
+
+        .left {
+            color: #f2e2e5;
+            display: flex;
+            place-content: center;
+            place-items: center;
+            flex-direction: column;
+            gap: 5rem;
+            height: fit-content;
+            margin-right: 1rem;
+            margin-left: 1rem;
+            text-align: justify;
+        }
+
+        .count-box {
+            row-gap: 2px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 100px;
+            border-radius: 55px;
+            border-top: 2px rgb(0, 0, 0) solid;
+            border-bottom: 2px rgb(0, 0, 0) solid;
+
+            .hobbies {
+                color: #E5B6B6;
+                padding-top: 2rem;
+            }
+        }
+
+        .count-box .grid {
+            display: grid;
+            grid-gap: 2px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            display: inline-grid;
+            row-gap: 2px;
+            padding-bottom: 2rem;
+        }
+
+        .count-box .grid div {
+
+            background-color: #f4d9d935;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            color: #f2e2e5;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .details {
+        .wrapper {
+            grid-template-columns: repeat(1, 1fr);
+
+            .count-box {
+                margin: 1rem 6rem;
+
+                .hobbies {
+                    color: #E5B6B6;
+                    padding-top: 0.5rem;
+                }
+
+                .grid {
+                    grid-template-columns: repeat(2, minmax(0, 0.5fr));
+                    grid-gap: 12px ;
+                    padding-bottom: 0.5rem;
+
+                    div {
+                        display: grid;
+                        place-content: center;
+                        place-items: center;
+                        padding: 0rem 2.5rem;
+                        margin: 0;
+                    }
+
+                }
+            }
+        }
+    }
+}

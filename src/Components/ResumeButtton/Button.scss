@@ -1,0 +1,102 @@
+.button {
+    display: flex;
+    place-content: center;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    font-size: 1rem;
+    font-family: 'Josefin Sans', serif;
+}
+
+.download-button {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    gap: 1rem;
+    background: linear-gradient(to bottom, #C9184A,#A4133C);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    transition: all;
+    cursor: pointer;
+
+    &:hover {
+        background: linear-gradient(to top, #A4133C,#9A0E28);
+        color: #dce0e4;
+        transition: all 1s ease-in-out;
+    }
+
+    &:focus {
+        background: none;
+        background-color: #6e1423;
+        outline: none;
+        transition: all 1s ease-in-out;
+    }
+
+    .loader-container {
+        width: 6rem;
+        height: 5rem;
+    }
+
+    .loader {
+        padding: 0;
+        margin: 0;
+
+        &::before {
+            content: "Downloading";
+            left: 0;
+            transform: translate(0, -50%);
+            animation: loader 5s linear infinite;
+            overflow: hidden;
+        }
+    }
+}
+
+
+@keyframes loader {
+    0% {
+        transform: translate(33px, -50%);
+        content: "Downloading";
+    }
+
+    5% {
+        transform: translate(33px, -50%);
+        content: "Downloading.";
+    }
+
+    10% {
+        transform: translate(33px, -50%);
+        content: "Downloading..";
+    }
+
+    20% {
+        transform: translate(33px, -50%);
+        content: "Downloading...";
+    }
+
+    30% {
+        transform: translate(33px, -50%);
+        content: "Downloading....";
+    }
+
+    40% {
+        transform: translate(33px, -50%);
+        content: "Downloading.";
+    }
+
+    50% {
+        transform: translate(33px, -50%);
+        content: "Downloading..";
+    }
+
+    70% {
+        transform: translate(33px, -50%);
+        content: "Downloading...";
+    }
+
+    100% {
+        transform: translate(33px, -50%);
+        content: "Downloading....";
+    }
+}

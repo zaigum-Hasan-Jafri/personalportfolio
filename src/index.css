@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Press+Start+2P&family=Lobster&family=Ms+Madi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Josefin+Sans&family=Play&family=Playfair+Display:ital@0;1&display=swap');
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+
+}
+
+.link:hover {
+    text-decoration: none;
+    color: inherit;
+}

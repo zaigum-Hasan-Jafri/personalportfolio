@@ -1,0 +1,233 @@
+.intro {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+    font-family: 'Josefin Sans', Georgia, 'Times New Roman', Times, serif;
+    background-color: #6e1423;
+
+    .left {
+        flex: 1 1 30rem;
+
+        .intro-img {
+            z-index: 10;
+            margin-top: 1rem;
+            width: 230px;
+            height: 230px;
+            animation: introImg 4s infinite alternate;
+        }
+
+        .name {
+            font-size: 3rem;
+            padding-inline: 1rem;
+            padding-top: 1rem;
+            display: inline-block;
+            color: #ffcad5;
+            font-weight: bold;
+            font-family: 'Josefin Sans', Georgia, 'Times New Roman', Times, serif;
+
+            &:hover {
+                color: #c9184a;
+                transition: all 1s ease;
+            }
+
+            .name-rect {
+                display: inline-block;
+                width: 2rem;
+                height: 2rem;
+                margin-left: 1rem;
+                background-color: whitesmoke;
+                transition: all 2s ease;
+                animation: introname 3.5s infinite alternate;
+
+                &:hover {
+                    display: inline-block;
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 50%;
+                    margin-left: 1rem;
+                    transition: all 2s ease;
+                }
+            }
+        }
+
+        .typewriter-name {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffb3c1;
+            font-family: 'Josefin Sans', Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .typewriter-main {
+            color: #ff758f;
+            font-size: 3rem;
+            font-weight: bold;
+            font-family: 'Josefin Sans', Georgia, 'Times New Roman', Times, serif;
+
+            &:hover {
+                color: #fff0f3;
+                transition: all 1s ease-in;
+            }
+        }
+
+        .typewriter-cursor {
+            color: #FF4D6D;
+            font-size: 2rem;
+            animation: typeWriterCursor 2s infinite alternate-reverse;
+            font-family: 'Press Start 2P', cursive;
+
+            &:hover {
+                border-radius: 50%;
+                transition: all 1s ease-in;
+            }
+        }
+
+        .intro-prof {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 3rem;
+            padding-left: 12px;
+            top: 0;
+            color: whitesmoke;
+        }
+
+        .textclass {
+            display: flex;
+
+            .text-span {
+                font-size: 3rem;
+                font-weight: bold;
+                color: rgb(0, 0, 0);
+                margin-right: 10px;
+            }
+
+            .text-p {
+                font-size: 3rem;
+                font-weight: bold;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-style: italic;
+                color: red;
+                margin-right: 10px;
+            }
+        }
+
+        .intro-icon {
+            font-size: 40px;
+            color: rgb(235, 235, 235);
+            text-decoration: none;
+        }
+
+        @keyframes introImg {
+            from {
+                transform: translateY(1rem);
+            }
+
+            to {
+                transform: translateX(0.5rem);
+            }
+        }
+
+        @keyframes introname {
+            0% {
+                background-color: crimson;
+            }
+
+            25% {
+                background-color: rgb(213, 143, 157);
+                transform: rotate(45deg);
+
+            }
+
+            50% {
+                background-color: rgb(201, 69, 95);
+            }
+
+            75% {
+                transform: rotate(45deg);
+                background-color: rgb(217, 50, 84);
+                transform: rotate(90deg);
+            }
+
+            100% {
+                background-color: crimson;
+                transform: rotate(180deg);
+            }
+
+        }
+
+        @keyframes typeWriterCursor {
+            0% {
+                color: thistle;
+                transform: rotateY(0deg);
+            }
+
+            25% {
+                color: tomato;
+                transform: rotateY(45deg);
+            }
+
+            50% {
+                color: antiquewhite;
+            }
+
+            75% {
+                color: brown;
+                transform: rotateY(90deg);
+            }
+
+            100% {
+                color: black;
+                transform: rotateY(180deg);
+            }
+
+        }
+    }
+
+    .right {
+        flex: 1 1 20rem;
+        background-image: radial-gradient(circle at 100%, #6e1423, black 50%, black 50%, #6e1423);
+        border-radius: 50% 0% 0% 50%;
+
+        .img-container {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                mix-blend-mode: color-burn;
+
+                &:hover {
+                    mix-blend-mode: normal;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .intro {
+        min-height: fit-content;
+
+        .typewriter-name {
+            font-size: 1rem !important;
+        }
+
+        .typewriter-main {
+            font-size: 2rem !important;
+        }
+
+
+
+        .right {
+            background-image: none;
+
+            .img-container {
+                img {
+                    mix-blend-mode: normal;
+                }
+            }
+        }
+    }
+
+
+}

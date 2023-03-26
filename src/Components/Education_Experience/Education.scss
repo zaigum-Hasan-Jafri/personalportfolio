@@ -1,0 +1,80 @@
+.container {
+    min-height: 100vh;
+    min-width: 100%;
+    padding-top: 80px;
+    background-color: #6e1423;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Josefin sans', Georgia, 'Times New Roman', Times, serif;
+
+    section {
+        flex: 1 1 15rem;
+        height: inherit;
+        margin: 1rem auto;
+        color: #ff9f9f;
+
+        &.education {
+            background-color: rgba(0, 0, 0, 0.337);
+            padding: 1rem 1rem;
+            text-align: center;
+
+            .column {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                border-right: 1px #ff9f9f solid;
+
+                div {
+                    flex: 1 1 20rem;
+                    border-top: 1px #ff9f9f solid;
+                    padding: 1rem 0 1rem 1rem;
+
+                    &:last-of-type {
+                        border-bottom: 1px #ff9f9f solid;
+                    }
+
+                    ul {
+                        padding: 0;
+                        margin: 0;
+                        list-style-type: none;
+                        text-align: left;
+                        font-size: 0.75rem;
+                    }
+
+                }
+            }
+        }
+
+        &.experience {
+            background-color: rgba(0, 0, 0, 0.337);
+            padding: 1rem 1rem;
+            text-align: center;
+
+            .column {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                border-right: 1px #ff9f9f solid;
+
+                div {
+                    flex: 1 1 20rem;
+                    padding: 1rem 0 1rem 1rem;
+                    border-top: 1px #ff9f9f solid;
+
+                    &:last-of-type {
+                        border-bottom: 1px #ff9f9f solid;
+                    }
+
+                    ul {
+                        padding: 0;
+                        margin: 0;
+                        list-style-type: none;
+                        text-align: left;
+                        font-size: 0.75rem;
+                    }
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,288 @@
+    .contact {
+        text-align: center;
+        background-color: #6e1423;
+        min-height: 100vh;
+        min-width: 100vw;
+        padding-top: 79px;
+        font-family: 'Josefin sans', Georgia, 'Times New Roman', Times, serif;
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            border-top: 2px #ff9f9f solid;
+
+            .contact-left {
+                flex: 1 1 35rem;
+                border-top: 2px solid rgb(2, 2, 14);
+                background-color: #630a1a;
+                margin-top: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                ul {
+                    color: #d2c9c9;
+                    margin: 10px;
+                    padding: 0;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    font-family: 'Josefin sans', sans-serif;
+
+                    li {
+                        font-size: 1rem;
+                        margin-left: 5px;
+                        padding: 0.7rem;
+                        cursor: pointer;
+
+                        &:active {
+                            color: white;
+                            background: rgb(7, 11, 40);
+                            border-radius: 25px;
+                        }
+
+                        &.active {
+                            transition: all 1.25s ease;
+                            color: #af1833;
+                            background: #e696a5;
+                            border-radius: 25px;
+                        }
+                    }
+                }
+
+                .container-flex {
+                    position: relative;
+                    width: auto;
+                    transform-style: flat;
+                    margin: auto;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    &:hover .box {
+                        transform: rotateY(25deg);
+                    }
+
+                    .box {
+                        perspective: 1250px;
+                        position: relative;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-content: space-between;
+                        width: 5rem;
+                        height: 5rem;
+                        border-radius: 25px;
+                        transition: all 0.5s ease;
+                        transform-style: preserve-3d;
+                        margin-top: 45px;
+
+                        &:hover~.box {
+                            transform: rotateY(-25deg);
+                        }
+
+                        &:hover .box {
+                            transform: rotateY(25deg);
+                        }
+
+                        &:hover {
+                            transform: rotateY(0deg) scale(2);
+                            z-index: 1;
+
+                            .content {
+
+                                p,
+                                h2 {
+                                    color: rgba(255, 255, 355, 1);
+                                    transform: translateY(0px);
+                                }
+
+                            }
+                        }
+
+                        &.box:hover .image-box:before {
+                            opacity: 1;
+                        }
+
+                        .image-box {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 90%;
+                            height: 90%;
+
+                            img {
+                                position: absolute;
+                                top: 0;
+                                left: 1.5rem;
+                                width: 50%;
+                                height: 50%;
+                                object-fit: contain;
+                                object-position: right center;
+                                border-radius: 25px;
+                            }
+
+                        }
+
+                        .image-box:before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: linear-gradient(100deg, #9A0E28, black);
+                            z-index: 1;
+                            opacity: 0;
+                            transition: 0.5s;
+                            mix-blend-mode: multiply;
+                        }
+
+                        .image-box:after {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: linear-gradient(100deg, rgb(176, 201, 236), black);
+                            z-index: 1;
+                            opacity: 0;
+                            transition: 1.5s;
+                        }
+
+                        .content {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            z-index: 1;
+                            display: flex;
+                            padding: 20px;
+                            align-items: flex-end;
+                            box-sizing: border-box;
+
+                            p {
+                                color: rgba(255, 255, 255, 0);
+                                transition: 0.3s;
+                                text-transform: uppercase;
+                                margin-bottom: 0px;
+                                font-size: 8px;
+                                transform: translateY(110px);
+                                transition-delay: 0.3s;
+                            }
+
+                            h2 {
+                                font-size: 10px;
+                                color: rgba(255, 255, 255, 0);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .contact-right {
+                flex: 1 1 20rem;
+                border-left: 2px solid rgb(2, 2, 14);
+                margin-top: 2rem;
+                display: grid;
+                grid-template-columns: repeat(14, minmax(10px, 1fr));
+                grid-template-rows: repeat(7, minmax(80px, 1fr));
+
+                .image-1 {
+                    background: url("../../assets/banner/daniel-korpai-n0mabeJj6_s-unsplash.jpg") no-repeat;
+                    background-size: cover;
+                    filter: blur(3px);
+                    grid-column-start: 2;
+                    grid-column-end: 8;
+                    grid-row-start: 2;
+                    grid-row-end: 7;
+                    border: 2px solid #000000;
+
+                    &:hover {
+                        filter: none;
+                        transition: all 1s ease-in-out;
+                    }
+                }
+
+                .image-2 {
+                    border: 2px solid #000;
+                    background: url("../../assets/banner/kelly-sikkema-v9FQR4tbIq8-unsplash.jpg") no-repeat;
+                    background-size: cover;
+                    filter: blur(2px);
+                    grid-column-start: 9;
+                    grid-column-end: 15;
+                    grid-row-start: 3;
+                    grid-row-end: 8;
+                    z-index: 1;
+
+                    &:hover {
+                        filter: none;
+                        transition: all 1s ease-in-out;
+                    }
+                }
+
+                .image-3 {
+                    background: url("../../assets/banner/daniel-korpai-Y3LGWCsrgmg-unsplash.jpg") no-repeat;
+                    background-size: cover;
+                    filter: blur(2px);
+                    border: 3px solid #000000;
+                    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.168);
+                    grid-column-start: 5;
+                    grid-column-end: 11;
+                    grid-row-start: 1;
+                    grid-row-end: 6;
+                    z-index: 2;
+
+                    &:hover {
+                        filter: none;
+                        transition: all 1s ease;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media screen and (max-width:768px) {
+        .contact {
+            min-height: fit-content;
+
+            .container-flex {
+                padding: 0;
+                margin: 0;
+
+                .box {
+                    width: 3rem;
+                    height: 1rem;
+                }
+            }
+
+            .contact-right {
+
+                .image-1 {
+                    filter: blur(0px) !important;
+                    grid-column-start: 2;
+                    grid-column-end: 7 !important;
+                    grid-row-start: 2;
+                    grid-row-end: 6 !important;
+
+                }
+
+                .image-2 {
+                    filter: blur(0px) !important;
+                    grid-column-start: 8 !important;
+                    grid-column-end: 13 !important;
+                    grid-row-end: 7 !important;
+                }
+
+                .image-3 {
+                    filter: blur(0px) !important;
+                    grid-column-end: 10 !important;
+                    grid-row-end: 5 !important;
+                }
+            }
+        }
+
+    }
